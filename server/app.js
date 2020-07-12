@@ -14,11 +14,9 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-
-
 // Routes
 app.get('/api/test', function(req, res){
-    res.json({data: 'hello'})
+    res.json({data: [1,2,3,4,5]});
 })
 app.use('/api/user', UserRouter);
 

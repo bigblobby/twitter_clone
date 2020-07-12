@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
+import Api from '../services/api';
 
 class Homepage extends React.Component {
     constructor(props) {
@@ -8,10 +9,9 @@ class Homepage extends React.Component {
     }
 
     getResults = () => {
-        axios.post('/api/user/create',{"username":"Tom"})
-            .then(result => {
-                console.log(result);
-            });
+        Api.getStuff()
+            .then(result => console.log(result));
+
     }
 
     render() {
