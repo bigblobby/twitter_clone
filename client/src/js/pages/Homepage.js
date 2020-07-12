@@ -8,7 +8,7 @@ class Homepage extends React.Component {
     }
 
     getResults = () => {
-        axios.get('/api/test')
+        axios.post('/api/user/create',{"username":"Tom"})
             .then(result => {
                 console.log(result);
             });
